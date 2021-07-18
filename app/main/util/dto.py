@@ -52,6 +52,16 @@ class AudioRecorderDto:
     })
 
 
+class AudioTranscriptionDto:
+    api = Namespace('audio_transcription', description='audio transcription related operations')
+    audio_transcription = api.model('audio_transcription', {
+        'user_id': fields.Integer(required=True, description='User id'),
+        'dialect_id': fields.Integer(required=True, description='Dialect id'),
+        'name': fields.String(required=True, description='Name'),
+        'quality': fields.Integer(required=True, description='Quality'),
+    })
+
+
 class CountryDto:
     api = Namespace('country', description='Country related operations')
     country = api.model('country', {

@@ -6,6 +6,7 @@ from .main.controller.account_controller import api as account_ns
 from .main.controller.auth_controller import api as auth_ns
 from .main.controller.audio_prompt_controller import api as audio_prompt_ns
 from .main.controller.audio_recorder_controller import api as audio_recorder_ns
+from .main.controller.audio_transcription_controller import api as audio_transcription_ns
 from .main.controller.country_controller import api as location_country_ns
 from .main.controller.state_controller import api as location_state_ns
 from .main.controller.city_controller import api as location_city_ns
@@ -24,6 +25,7 @@ api.add_namespace(auth_ns)
 api.add_namespace(account_ns, path='/account')
 api.add_namespace(audio_prompt_ns, path='/audio_prompt')
 api.add_namespace(audio_recorder_ns, path='/audio_recorder')
+api.add_namespace(audio_transcription_ns, path='/audio_transcription')
 api.add_namespace(location_country_ns, path='/location/country')
 api.add_namespace(location_state_ns, path='/location/state')
 api.add_namespace(location_city_ns, path='/location/city')
