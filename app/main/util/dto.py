@@ -95,3 +95,11 @@ class CityDto:
         'latitude': fields.String(required=True, description='Latitude'),
         'longitude': fields.String(required=True, description='Longitude'),
     })
+
+
+class DocumentDto:
+    api = Namespace('document', description='document related operations')
+    document = api.model('document', {
+        'name': fields.String(required=True, description='Name'),
+        'description': fields.String(required=True, description='Description'),
+    })

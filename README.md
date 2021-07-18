@@ -39,18 +39,17 @@ Luego entrar al enlace http://127.0.0.1:5000
 # Cambios
 
 
-Modelo | Service | Dto | Controller
-Audio Prompt | Si | Si | Si
-Country | Si | Si | Si
-State | Si | Si | Si
-City | Si | Si | Si
-audio_prompt | Si | Si | Si
-audio_recorder | Si | Si | Si
-audio_transcription | No | No | No
-document | No | No | No
-language | No | No | No
-text_prompt | No | No | No
-
+Modelo | Service | Dto | Controller | Estado
+Audio Prompt | Si | Si | Si | Por verificar
+Country | Si | Si | Si | Por verificar
+State | Si | Si | Si | Por verificar
+City | Si | Si | Si | Por verificar
+audio_prompt | Si | Si | Si | Por verificar
+audio_recorder | Si | Si | Si | Por verificar
+audio_transcription | Si | Si | Si | Por verificar
+document | Si | Si | Si | Por verificar
+language | No | No | No | Por verificar
+text_prompt | No | No | No | Por verificar
 
 
 # Docker

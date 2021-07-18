@@ -10,6 +10,7 @@ from .main.controller.audio_transcription_controller import api as audio_transcr
 from .main.controller.country_controller import api as location_country_ns
 from .main.controller.state_controller import api as location_state_ns
 from .main.controller.city_controller import api as location_city_ns
+from .main.controller.document_controller import api as document_ns
 
 
 blueprint = Blueprint('api', __name__)
@@ -29,3 +30,4 @@ api.add_namespace(audio_transcription_ns, path='/audio_transcription')
 api.add_namespace(location_country_ns, path='/location/country')
 api.add_namespace(location_state_ns, path='/location/state')
 api.add_namespace(location_city_ns, path='/location/city')
+api.add_namespace(document_ns, path='/document')
