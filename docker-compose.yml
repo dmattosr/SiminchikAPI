@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    build: .
+    container_name: siminchikapi
+    hostname: siminchikapi
+    volumes:
+      - ./:/app
+    command: python manage.py runserver -h 0.0.0.0
+    networks:
+      apps:
+        ipv4_address: 192.168.10.10
+
+networks:
+  apps:
+    external: true

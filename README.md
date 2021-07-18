@@ -36,13 +36,12 @@ Luego entrar al enlace http://127.0.0.1:5000
 [link](./PruebasApi.md)
 
 
-# Cambios
+# Docker
 
+Ejecutar
 
-Modelo | Service | Controller
-audio_prompt
-audio_recorder
-audio_transcription
-document
-language
-location
+```bash
+
+docker-compose up -s
+
+```
