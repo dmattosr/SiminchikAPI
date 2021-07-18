@@ -26,10 +26,10 @@ class AudioPromptCreate(Resource):
 @api.param('audio_prompt', 'The audio prompt identifier')
 @api.response(404, 'Audio prompt not found.')
 class AudioPrompt(Resource):
-    @api.doc('get a user')
+    @api.doc('get a audio recoredr')
     @api.marshal_with(_audioprompt)
     def get(self, audio_prompt):
-        """get user information given its identifier"""
+        """get audio prompt information given its identifier"""
         audioprompt = get_an_audio_prompt(audio_prompt)
         if not audioprompt:
             api.abort(404)

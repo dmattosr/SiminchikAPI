@@ -41,6 +41,17 @@ class AudioPromptDto:
     })
 
 
+class AudioRecorderDto:
+    api = Namespace('audio_recorder', description='audio recorder related operations')
+    audio_recorder = api.model('audio_recorder', {
+        'user_id': fields.Integer(required=True, description='User id'),
+        'audio_prompt_id': fields.Integer(required=True, description='Audio Prompt id'),
+        'dialect_id': fields.Integer(required=True, description='Dialect id'),
+        'name': fields.String(required=True, description='Name'),
+        'quality': fields.Integer(required=True, description='Quality'),
+    })
+
+
 class CountryDto:
     api = Namespace('country', description='Country related operations')
     country = api.model('country', {
@@ -74,11 +85,3 @@ class CityDto:
         'latitude': fields.String(required=True, description='Latitude'),
         'longitude': fields.String(required=True, description='Longitude'),
     })
-
-# class AudioRecordedDto:
-#     api = Namespace('audio_recorded', description='audio recorded related operations')
-#     audio_recorder = api.model('audio_recorded', {
-#         'text_prompt_id': fields.Integer(required=True, description='text prompt id'),
-#         'user_id': fields.Integer(required=True, description='user id'),
-#         'name': fields.String(required=True, description='name'),
-#     })

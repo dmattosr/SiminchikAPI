@@ -36,6 +36,23 @@ Luego entrar al enlace http://127.0.0.1:5000
 [link](./PruebasApi.md)
 
 
+# Cambios
+
+
+Modelo | Service | Dto | Controller
+Audio Prompt | Si | Si | Si
+Country | Si | Si | Si
+State | Si | Si | Si
+City | Si | Si | Si
+audio_prompt | Si | Si | Si
+audio_recorder | Si | Si | Si
+audio_transcription | No | No | No
+document | No | No | No
+language | No | No | No
+text_prompt | No | No | No
+
+
+
 # Docker
 
 Ejecutar
