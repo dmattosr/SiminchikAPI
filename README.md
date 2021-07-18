@@ -34,3 +34,15 @@ Luego entrar al enlace http://127.0.0.1:5000
 # Pruebas a la API
 
 [link](./PruebasApi.md)
+
+
+# Cambios
+
+
+Modelo | Service | Controller
+audio_prompt
+audio_recorder
+audio_transcription
+document
+language
+location
