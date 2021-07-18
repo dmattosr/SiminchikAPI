@@ -48,7 +48,8 @@ audio_prompt | Si | Si | Si | Por verificar
 audio_recorder | Si | Si | Si | Por verificar
 audio_transcription | Si | Si | Si | Por verificar
 document | Si | Si | Si | Por verificar
-language | No | No | No | Por verificar
+Language | Si | Si | Si | Por verificar
+Dialect | Si | Si | Si | Por verificar
 text_prompt | No | No | No | Por verificar
 
 

@@ -103,3 +103,19 @@ class DocumentDto:
         'name': fields.String(required=True, description='Name'),
         'description': fields.String(required=True, description='Description'),
     })
+
+
+class LanguageDto:
+    api = Namespace('language', description='language related operations')
+    language = api.model('language', {
+        'name': fields.String(required=True, description='Name'),
+        'iso3': fields.String(required=True, description='Iso3'),
+    })
+
+
+class DialectDto:
+    api = Namespace('dialect', description='dialect related operations')
+    dialect = api.model('dialect', {
+        'language_id': fields.Integer(required=True, description='Language'),
+        'name': fields.String(required=True, description='Name'),
+    })
