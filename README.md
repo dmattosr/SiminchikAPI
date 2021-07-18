@@ -40,6 +40,7 @@ Luego entrar al enlace http://127.0.0.1:5000
 
 
 Modelo | Service | Dto | Controller | Estado
+----|-----|-----|-----|-----
 Audio Prompt | Si | Si | Si | Por verificar
 Country | Si | Si | Si | Por verificar
 State | Si | Si | Si | Por verificar
