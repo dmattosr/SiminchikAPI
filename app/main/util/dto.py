@@ -39,3 +39,46 @@ class AudioPromptDto:
         'user_id': fields.Integer(required=True, description='user id'),
         'name': fields.String(required=True, description='name'),
     })
+
+
+class CountryDto:
+    api = Namespace('country', description='Country related operations')
+    country = api.model('country', {
+        'name': fields.String(required=True, description='Name'),
+        'iso3': fields.String(description='ISO3'),
+        'iso2': fields.String(description='ISO32'),
+        'phone_code': fields.String(description='Phone de'),
+        'currency': fields.String(description='Currency'),
+        'native': fields.String(description='Native'),
+        'region': fields.String(description='Región'),
+        'subregion': fields.String(description='Subregion'),
+        'timezone': fields.String(description='Timezone'),
+        'text_prompt_id': fields.Integer(description='text prompt id'),
+    })
+
+
+class StateDto:
+    api = Namespace('state', description='State related operations')
+    state = api.model('state', {
+        'country_id': fields.Integer(description='Country id'),
+        'name': fields.String(required=True, description='State name'),
+        'state_code': fields.String(required=True, description='State Code'),
+    })
+
+
+class CityDto:
+    api = Namespace('city', description='City related operations')
+    city = api.model('city', {
+        'state_id': fields.Integer(description='City id'),
+        'name': fields.String(description='City name'),
+        'latitude': fields.String(required=True, description='Latitude'),
+        'longitude': fields.String(required=True, description='Longitude'),
+    })
+
+# class AudioRecordedDto:
+#     api = Namespace('audio_recorded', description='audio recorded related operations')
+#     audio_recorder = api.model('audio_recorded', {
+#         'text_prompt_id': fields.Integer(required=True, description='text prompt id'),
+#         'user_id': fields.Integer(required=True, description='user id'),
+#         'name': fields.String(required=True, description='name'),
+#     })

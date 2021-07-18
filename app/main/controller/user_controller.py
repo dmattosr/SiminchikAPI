@@ -19,6 +19,7 @@ class UserList(Resource):
         data = request.json
         return save_new_user(data=data)
 
+
 @api.route('/<user_id>')
 @api.param('user_id', 'The User identifier')
 @api.response(404, 'User not found.')
