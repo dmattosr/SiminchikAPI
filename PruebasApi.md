@@ -62,6 +62,25 @@ curl --header "Content-Type: application/json" \
 `Nota:` cambiar el `1` por el id.(numero identificador) del usuario.
 
 
+## Audio Prompt
+
+Método: `POST`
+Ruta: `/audio_prompt/`
+
+Ejemplo 2
+```bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{
+      "text_prompt_id": 0,
+      "user_id": 0,
+      "name": "string"
+    }' \
+  http://localhost:5000/audio_prompt/
+```
+
+`Nota:` cambiar el `1` por el id.(numero identificador) del usuario.
+
 
 # auth
 
