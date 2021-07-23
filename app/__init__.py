@@ -14,6 +14,7 @@ from .main.controller.document_controller import api as document_ns
 from .main.controller.language_controller import api as language_ns
 from .main.controller.dialect_controller import api as dialect_ns
 from .main.controller.text_prompt_controller import api as text_prompt_ns
+from .main.controller.text_transcription_controller import api as text_transcriotion_ns
 
 
 blueprint = Blueprint('api', __name__)
@@ -37,3 +38,4 @@ api.add_namespace(document_ns, path='/document')
 api.add_namespace(language_ns, path='/language')
 api.add_namespace(dialect_ns, path='/dialect')
 api.add_namespace(text_prompt_ns, path='/text_prompt')
+api.add_namespace(text_transcriotion_ns, path='/text_transcription')

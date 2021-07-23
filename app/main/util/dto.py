@@ -128,3 +128,14 @@ class TextPromptDto:
         'text': fields.String(required=True, description='Text'),
         'source': fields.String(required=True, description='Source'),
     })
+
+
+class TextTranscriptionDto:
+    api = Namespace('text_transcription', description='text transcription related operations')
+    texttranscription = api.model('text_transcription', {
+        'audio_transcription_id': fields.Integer(required=True, description='Audio transcription Id'),
+        'source_dialect_id': fields.Integer(required=True, description='Source dialect Id'),
+        'dest_dialect_id': fields.Integer(required=True, description='Destination dialect Id'),
+        'text_transcription': fields.String(description='Text transcription'),
+        'quality': fields.Integer(description='Quality'),
+    })

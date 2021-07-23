@@ -6,7 +6,7 @@ class Text_transcription(db.Model):
     """
     Text transcription Model for storing user related details
     """
-    __tablename__ = "text_prompt"
+    __tablename__ = "text_transcription"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     audio_transcription_id = db.Column(db.Integer, nullable=False)
     source_dialect_id = db.Column(db.Integer, nullable=False)
