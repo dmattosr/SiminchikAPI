@@ -13,6 +13,7 @@ from .main.controller.city_controller import api as location_city_ns
 from .main.controller.document_controller import api as document_ns
 from .main.controller.language_controller import api as language_ns
 from .main.controller.dialect_controller import api as dialect_ns
+from .main.controller.text_prompt_controller import api as text_prompt_ns
 
 
 blueprint = Blueprint('api', __name__)
@@ -35,3 +36,4 @@ api.add_namespace(location_city_ns, path='/location/city')
 api.add_namespace(document_ns, path='/document')
 api.add_namespace(language_ns, path='/language')
 api.add_namespace(dialect_ns, path='/dialect')
+api.add_namespace(text_prompt_ns, path='/text_prompt')

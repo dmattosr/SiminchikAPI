@@ -51,7 +51,8 @@ audio_transcription | Si | Si | Si | Por verificar
 document | Si | Si | Si | Por verificar
 Language | Si | Si | Si | Por verificar
 Dialect | Si | Si | Si | Por verificar
-text_prompt | No | No | No | Por verificar
+text_prompt | Si | Si | Si | Por verificar
+text_transcription |  No | No | No | Pendiente
 
 
 # Docker

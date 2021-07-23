@@ -119,3 +119,12 @@ class DialectDto:
         'language_id': fields.Integer(required=True, description='Language'),
         'name': fields.String(required=True, description='Name'),
     })
+
+
+class TextPromptDto:
+    api = Namespace('text_prompt', description='text prompt related operations')
+    textprompt = api.model('text_prompt', {
+        'dialect_id': fields.Integer(required=True, description='Dialect iId'),
+        'text': fields.String(required=True, description='Text'),
+        'source': fields.String(required=True, description='Source'),
+    })
