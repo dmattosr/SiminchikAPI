@@ -13,7 +13,7 @@ def save_new_document(data):
 
 
 def get_an_document(document_id):
-    return Document.filter_by(id=document_id).first()
+    return Document.query.filter_by(id=document_id).first()
 
 
 def save_changes(data):

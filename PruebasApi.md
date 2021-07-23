@@ -62,22 +62,40 @@ curl --header "Content-Type: application/json" \
 `Nota:` cambiar el `1` por el id.(numero identificador) del usuario.
 
 
-## Audio Prompt
+# Audio Prompt
+
+# Creación Audio Prompt
 
 Método: `POST`
 Ruta: `/audio_prompt/`
 
-Ejemplo 2
+Ejemplo
+
 ```bash
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{
-      "text_prompt_id": 0,
-      "user_id": 0,
-      "name": "string"
+      "text_prompt_id": 1,
+      "user_id": 1,
+      "name": "ESTE ES UN MENSAJE DE PRUEBA"
     }' \
   http://localhost:5000/audio_prompt/
 ```
+
+# Lectura Audio Prompt
+
+Método: `GET`
+Ruta: `/audio_prompt/1`
+
+Ejemplo
+
+```bash
+curl --header "Content-Type: application/json" \
+  --request GET \
+  http://localhost:5000/audio_prompt/1
+```
+
+respuesta
 
 `Nota:` cambiar el `1` por el id.(numero identificador) del usuario.
 
@@ -86,3 +104,121 @@ curl --header "Content-Type: application/json" \
 
 
 # account
+
+
+
+
+
+PRUEBAS
+=========
+
+# country
+
+POST
+
+{
+  "name": "PERU",
+  "iso3": "PER",
+  "iso2": "PE",
+  "phone_code": "51",
+  "currency": "SOL",
+  "native": "string",
+  "region": "string",
+  "subregion": "string",
+  "timezone": "America/Lima"
+}
+
+
+## GET
+
+/location/country/1
+
+# state
+
+## POST
+
+{
+  "country_id": 1,
+  "name": "LIMA",
+  "state_code": "01"
+}
+
+
+## GET
+/location/state/1
+
+
+# city
+
+## POST
+
+{
+  "state_id": 1,
+  "name": "LIMA CERCADO",
+  "latitude": "-12.0453",
+  "longitude": "-77.0311"
+}
+
+
+## GET
+
+/location/city/1
+
+# document
+
+## POST
+
+{
+  "name": "DNI",
+  "description": "DOCUMENTO NACIONAL DE IDENTIDAD"
+}
+
+
+## GET
+
+/document/1
+
+
+
+# language
+
+## POST
+
+{
+  "name": "ESPAÑOL",
+  "iso3": "esp"
+}
+
+
+## GET
+
+/language/1
+
+
+# dialect
+
+## POST
+
+{
+  "language_id": 1,
+  "name": "CASTELLANO"
+}
+
+## GET
+
+
+/dialect/1
+
+
+
+
+
+
+user
+
+
+
+
+
+
+https://github.com/Siminchik/NER_Quechua 

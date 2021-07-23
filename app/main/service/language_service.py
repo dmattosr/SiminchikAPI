@@ -13,20 +13,20 @@ def save_new_language(data):
 
 
 def get_an_language(language_id):
-    return Language.filter_by(id=language_id).first()
+    return Language.query.filter_by(id=language_id).first()
 
 
 def save_new_dialect(data):
     new_dialect = Dialect(
+        language_id=data['language_id'],
         name=data['name'],
-        iso3=data['iso3'],
     )
     save_changes(new_dialect)
     return 201
 
 
 def get_an_dialect(dialect_id):
-    return Dialect.filter_by(id=dialect_id).first()
+    return Dialect.query.filter_by(id=dialect_id).first()
 
 
 def save_changes(data):

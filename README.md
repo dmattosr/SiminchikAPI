@@ -1,9 +1,6 @@
 # SiminchikAPI
 
 
-# SiminchikAPI en Windows 10
-
-Activar la terminal de linux en este [enlace](https://www.neoguias.com/activar-terminal-linux-windows-10), seleccionar `Ubuntu`
 
 ## Instalación
 
@@ -21,6 +18,13 @@ cd SiminchikAPI
 pip3 install -r requirements.txt
 
 ```
+
+Nota:
+
+Para usar dentro de Windows 10, seguir las siguientes indicaciones:
+
+Activar la terminal de linux en este [enlace](https://www.neoguias.com/activar-terminal-linux-windows-10), seleccionar `Ubuntu`
+
 
 ## Iniciar SiminchikAPI
 
@@ -52,7 +56,7 @@ document | Si | Si | Si | Por verificar
 Language | Si | Si | Si | Por verificar
 Dialect | Si | Si | Si | Por verificar
 text_prompt | Si | Si | Si | Por verificar
-text_transcription |  No | No | No | Pendiente
+text_transcription |  i | Si | Si | Por verificar
 
 
 # Docker

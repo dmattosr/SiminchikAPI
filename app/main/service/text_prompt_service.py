@@ -18,7 +18,7 @@ def save_new_text_prompt(data):
 
 
 def get_an_text_prompt(text_prompt_id):
-    return Text_prompt.filter_by(id=text_prompt_id).first()
+    return Text_prompt.query.filter_by(id=text_prompt_id).first()
 
 
 def save_changes(data):

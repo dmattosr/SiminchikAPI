@@ -18,7 +18,7 @@ def save_new_audio_transcription(data):
 
 
 def get_an_audio_transcription(audio_transcription_id):
-    return Audio_transcription.filter_by(id=audio_transcription_id).first()
+    return Audio_transcription.query.filter_by(id=audio_transcription_id).first()
 
 
 def save_changes(data):

@@ -20,7 +20,7 @@ def save_new_audio_recorder(data):
 
 
 def get_an_audio_recorder(audio_prompt_id):
-    return Audio_recorded.filter_by(id=audio_prompt_id).first()
+    return Audio_recorded.query.filter_by(id=audio_prompt_id).first()
 
 
 def save_changes(data):

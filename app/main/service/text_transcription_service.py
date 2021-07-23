@@ -19,7 +19,7 @@ def save_new_text_transcription(data):
 
 
 def get_an_text_transcription(text_transcription_id):
-    return Text_transcription.filter_by(id=text_transcription_id).first()
+    return Text_transcription.query.filter_by(id=text_transcription_id).first()
 
 
 def save_changes(data):

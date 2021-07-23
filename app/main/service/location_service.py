@@ -29,7 +29,7 @@ def save_new_country(data):
 
 
 def get_an_country(country_id):
-    return Country.filter_by(id=country_id).first()
+    return Country.query.filter_by(id=country_id).first()
 
 
 # ########## State
@@ -52,14 +52,14 @@ def save_new_state(data):
 
 
 def get_an_state(state_id):
-    return State.filter_by(id=state_id).first()
+    return State.query.filter_by(id=state_id).first()
 
 
 # ########## City
 def save_new_city(data):
     city = City.query.filter_by(state_id=data['state_id'], name=data['name']).first()
     if not city:
-        new_city = State(
+        new_city = City(
             state_id=data['state_id'],
             name=data['name'],
             latitude=data['latitude'],
@@ -76,7 +76,7 @@ def save_new_city(data):
 
 
 def get_an_city(state_id):
-    return City.filter_by(id=state_id).first()
+    return City.query.filter_by(id=state_id).first()
 
 
 

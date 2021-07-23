@@ -28,9 +28,9 @@ class LanguageCreate(Resource):
 class Language(Resource):
     @api.doc('get a language')
     @api.marshal_with(_language)
-    def get(self, document_id):
+    def get(self, language_id):
         """get language information given its identifier"""
-        language = get_an_language(document_id)
+        language = get_an_language(language_id)
         if not language:
             api.abort(404)
         else:

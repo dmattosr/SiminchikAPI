@@ -35,7 +35,6 @@ class AccountDto:
 class AudioPromptDto:
     api = Namespace('audio_prompt', description='audio prompt related operations')
     audio_prompt = api.model('audio_prompt', {
-        'text_prompt_id': fields.Integer(required=True, description='text prompt id'),
         'user_id': fields.Integer(required=True, description='user id'),
         'name': fields.String(required=True, description='name'),
     })
@@ -74,7 +73,6 @@ class CountryDto:
         'region': fields.String(description='Región'),
         'subregion': fields.String(description='Subregion'),
         'timezone': fields.String(description='Timezone'),
-        'text_prompt_id': fields.Integer(description='text prompt id'),
     })
 
 
@@ -90,7 +88,7 @@ class StateDto:
 class CityDto:
     api = Namespace('city', description='City related operations')
     city = api.model('city', {
-        'state_id': fields.Integer(description='City id'),
+        'state_id': fields.Integer(description='State id'),
         'name': fields.String(description='City name'),
         'latitude': fields.String(required=True, description='Latitude'),
         'longitude': fields.String(required=True, description='Longitude'),
