@@ -56,7 +56,7 @@ Luego entrar al enlace http://127.0.0.1:5000
 
 
 Modelo | Estado
-----|-----|-----|-----|-----
+----|-----
 Audio Prompt | Verificado
 Country | Verificado
 State | Verificado
