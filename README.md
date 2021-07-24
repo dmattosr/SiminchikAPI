@@ -82,7 +82,7 @@ docker-compose up -s
 ```
 
 
-# TODO
+# TO DO
 
 - Diccionario de datos
 - Modelo de datos
