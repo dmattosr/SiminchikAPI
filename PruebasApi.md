@@ -112,10 +112,15 @@ respuesta
 PRUEBAS
 =========
 
+
+
+
+
 # country
 
 POST
 
+```json
 {
   "name": "PERU",
   "iso3": "PER",
@@ -127,98 +132,261 @@ POST
   "subregion": "string",
   "timezone": "America/Lima"
 }
+```
 
 
 ## GET
 
+```
+
+
 /location/country/1
+```
 
 # state
 
 ## POST
 
+```json
 {
   "country_id": 1,
   "name": "LIMA",
   "state_code": "01"
 }
-
+```
 
 ## GET
+
+```
+
 /location/state/1
 
-
+```
 # city
 
 ## POST
 
+```json
 {
   "state_id": 1,
   "name": "LIMA CERCADO",
   "latitude": "-12.0453",
   "longitude": "-77.0311"
 }
+```
 
 
 ## GET
 
+
+```
+
 /location/city/1
+
+```
 
 # document
 
+
+```json
 ## POST
 
 {
   "name": "DNI",
   "description": "DOCUMENTO NACIONAL DE IDENTIDAD"
 }
+```
 
 
 ## GET
 
+```
+
 /document/1
 
+
+```
 
 
 # language
 
+```json
 ## POST
 
 {
   "name": "ESPAÑOL",
   "iso3": "esp"
 }
+```
 
 
 ## GET
 
+```
+
 /language/1
 
+
+```
 
 # dialect
 
 ## POST
 
+```json
 {
   "language_id": 1,
   "name": "CASTELLANO"
 }
+```
 
 ## GET
 
 
+```
+
 /dialect/1
 
+```
+
+
+# user
+
+
+## POST
+
+```json
+{
+  "first_name": "PEDRO",
+  "last_name": "CASTILLO",
+  "type_doc_id": 1,
+  "num_doc": "44123123",
+  "country_id": 1,
+  "state_id": 1,
+  "city_id": 1,
+  "dialect_id": 1
+}
+```
+
+
+## GET
+
+```
+
+/user/1
+
+```
+
+# audio_prompt
+
+## POST
+
+
+```json
+{
+  "user_id": 1,
+  "name": "NO SE PIERDAN EL KEIKINO"
+}
+```
+
+
+## GET
+
+```
+
+/audio_prompt/1
+
+```
+
+# audio_recorder
+
+
+## POST
+
+```json
+{
+  "user_id": 1,
+  "audio_prompt_id": 1,
+  "dialect_id": 1,
+  "name": "No se pierdan el KeiKino",
+  "quality": 50
+}
+```
+
+## GET
+
+```
+
+/audio_recorder/1
+
+```
+
+# audio_transcription
+
+
+## POST
+
+
+```json
+{
+  "user_id": 1,
+  "dialect_id": 1,
+  "name": "Bajen al KeiKino hay lugar para todos",
+  "quality": 50
+}
+```
+
+## GET
+
+```
+
+/audio_transcription/1
+
+```
+
+# text_prompt
+
+## POST
+
+```json
+{
+  "dialect_id": 1,
+  "text": "El Keikino hasta las 6 de la mañana",
+  "source": "El Keikino hasta las 6 de la mañana"
+}
+```
 
 
 
+## GET
+
+```
+
+/text_prompt/1
+
+```
+
+# text_transcription
 
 
-user
+## POST
+
+```json
+
+{
+  "audio_transcription_id": 1,
+  "source_dialect_id": 1,
+  "dest_dialect_id": 1,
+  "text_transcription": "Habrá mucha comida y de regalo tapers en el Keikno",
+  "quality": 30
+}
+```
 
 
+## GET
 
+```
 
+/text_transcription/1
 
-
-https://github.com/Siminchik/NER_Quechua 
+```

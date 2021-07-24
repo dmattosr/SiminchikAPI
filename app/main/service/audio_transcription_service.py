@@ -11,7 +11,7 @@ def save_new_audio_transcription(data):
         dialect_id=data['dialect_id'],
         name=data['name'],
         quality=data['quality'],
-        changed_on=datetime.datetime.utcnow(),
+        registered_on=datetime.datetime.utcnow(),
     )
     save_changes(new_audio_transcription)
     return 201

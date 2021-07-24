@@ -1,6 +1,18 @@
 # SiminchikAPI
 
 
+Tomado de la fuente de https://github.com/rjzevallos
+
+# Colaboradores
+
+- Solís Carbajal Alejandro Daniel
+- Montero Osorio Edwar
+- Guillen Mamani Juan Jose
+- Mattos Rosales Daniel
+- Cahuana Ccallocunto Kevin Edward
+- Diaz Rojas, Joao Samel
+
+
 
 ## Instalación
 
@@ -40,23 +52,23 @@ Luego entrar al enlace http://127.0.0.1:5000
 [link](./PruebasApi.md)
 
 
-# Cambios
+# Servicios agregados
 
 
-Modelo | Service | Dto | Controller | Estado
+Modelo | Estado
 ----|-----|-----|-----|-----
-Audio Prompt | Si | Si | Si | Por verificar
-Country | Si | Si | Si | Por verificar
-State | Si | Si | Si | Por verificar
-City | Si | Si | Si | Por verificar
-audio_prompt | Si | Si | Si | Por verificar
-audio_recorder | Si | Si | Si | Por verificar
-audio_transcription | Si | Si | Si | Por verificar
-document | Si | Si | Si | Por verificar
-Language | Si | Si | Si | Por verificar
-Dialect | Si | Si | Si | Por verificar
-text_prompt | Si | Si | Si | Por verificar
-text_transcription |  i | Si | Si | Por verificar
+Audio Prompt | Verificado
+Country | Verificado
+State | Verificado
+City | Verificado
+audio_prompt | Verificado
+audio_recorder | Verificado
+audio_transcription | Verificado
+document | Verificado
+Language | Verificado
+Dialect | Verificado
+text_prompt | Verificado
+text_transcription | Verificado
 
 
 # Docker
@@ -68,3 +80,12 @@ Ejecutar
 docker-compose up -s
 
 ```
+
+
+# TODO
+
+- Diccionario de datos
+- Modelo de datos
+- Pruebas unitarias
+- Llaves foraneas y constrains
+- Integración con el Speech Recognition App
