@@ -38,6 +38,17 @@ Para usar dentro de Windows 10, seguir las siguientes indicaciones:
 Activar la terminal de linux en este [enlace](https://www.neoguias.com/activar-terminal-linux-windows-10), seleccionar `Ubuntu`
 
 
+## Iniciar base de datos
+
+
+```bash
+python3 manage.py db init
+python3 manage.py db migrate
+python3 manage.py db upgrade
+```
+
+
+
 ## Iniciar SiminchikAPI
 
 ```bash
